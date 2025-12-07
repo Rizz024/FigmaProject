@@ -20,15 +20,33 @@
 .header-section{
     position: absolute;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 85%;
-    top: 20px;
+    top: 10px;
 }
 .menubar{
     display: none;
 }
 .nav{
     display: none;
+}
+.lists-pc {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: white;
+    gap: 20px;
+    li:hover {
+        border-bottom: 2px solid white;
+        transition: .5s linear;
+        cursor: pointer;
+    }
+}
+.link-pc{
+    align-items: center;
+    display: flex;
+    gap: 30px;
 }
 .link1{
 border-radius: 4px;
@@ -872,6 +890,9 @@ input {
         padding: 10px;
         gap: 10px;
     }
+    .ul-lists-pc, .link-pc {
+        display: none;
+    }
    .menubar{
     display: block;
     position: absolute;
@@ -902,8 +923,8 @@ input {
     }
     #close-menu{
         position: absolute;
-        right: 10px;
-        top: 20px;
+        right: 20px;
+        top: 25px;
         &:hover {
             color: #e0b507;
         }
