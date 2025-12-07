@@ -8,13 +8,9 @@
     <title>Teamflow</title>
   </head>
   <body>
-    <div class="hero-section">
-      <header class="header-section">
-        <div class="Logo">
-          <img src="./images/Logo.png" alt="teamflow" />
-        </div>
-        <div class="nav">
-          <div class = "menubar"> <i class="fa fa-bars"></i></div>
+    <div class="nav">
+      <img src="./images/Logo.png" class="menu-logo" alt="teamflow" />
+      <i class="fa fa-close" id="close-menu" onclick="closeMenu()"></i>
         <div class="ul-lists">
           <ul class="lists">
             <li>Product</li>
@@ -29,6 +25,13 @@
           <a href="" class="link2">Sign Up</a>
         </div>
       </div>
+    <div class="hero-section">
+      <header class="header-section">
+        <div class="Logo">
+          <img src="./images/Logo.png" alt="teamflow" />
+        </div>
+        
+        <div class ="menubar" onclick="openMenu()"> <i class="fa fa-bars"></i></div>
       </header>
 
       <div id="left-right">
@@ -276,22 +279,21 @@
         </div>
     </section> -->
     <section class="newsletter-section">
-    <h4 class="support-text">Support</h4>
-    <h3 class="main-title">Subscribe Newsletter & get</h3>
-    <p class="sub-title">Company News</p>
+      <div class="newsletter-con">
+        <h4 class="support-text">Support</h4>
+        <h3 class="main-title">Subscribe Newsletter & get</h3>
+        <p class="sub-title">Company News</p>
 
-    <div class="input-box">
-        <div class="input-group">
-            <span class="email-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <input type="email" placeholder="Your email">
-        </div>
-
-        <button class="subscribe-btn">
+        <div class="input-box">
+          <i class="fa fa-envelope email-icon" aria-hidden="true"></i>
+          <input type="email" placeholder="Your email">
+          <button class="subscribe-btn">
             <i class="fa fa-paper-plane" aria-hidden="true"></i>
-            <span class="send-icon"></span> Subscribe
-        </button>
-    </div>
-</section>
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </section>
     
 <section id="footer-section">
     <div class="f-section1">
@@ -312,65 +314,77 @@
             <img src="./images/Group 23.png" alt="img-23" class="img-99">
           </div>
         </div>
-
      </div>
-    <div class="f-section2">
-      <h4>Product</h4>
-      <ul class="ul-list1">
-        <li>Product</li>
-        <li>Pricing</li>
-        <li>Enterprise</li>
-        <li>Partners</li>
-        <li>Affiliate</li>
-        <li>Integrations</li>
-        <li>Developers</li>
-        <li>Students</li>
-        <li>Work OS</li>
-      </ul>
-    </div>
 
-    <div class="f-section3">
-      <h4>Team</h4>
-      <ul class="ul-list2">
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>Careers</li>
-        <li>Find a Partner</li>
-        <li>In the News</li>
-      </ul>
-    </div>
+     <div class="f-section-con">
+        <div class="f-section1">
+          <h4>Product</h4>
+          <ul class="ul-list1">
+            <li>Product</li>
+            <li>Pricing</li>
+            <li>Enterprise</li>
+            <li>Partners</li>
+            <li>Affiliate</li>
+            <li>Integrations</li>
+            <li>Developers</li>
+            <li>Students</li>
+            <li>Work OS</li>
+          </ul>
+        </div>
 
-    <div class="f-section4">
-      <h4>Solutions</h4>
-      <ul class="ul-list3">
-        <li>Project Management</li>
-        <li>Marketing</li>
-        <li>CRM and Sales</li>
-        <li>Software Development</li>
-        <li>Constructions</li>
-        <li>Creative Production</li>
-        <li>Remote Work</li>
-        <li>HR</li>
-        <li>IT</li>
-        <li>See More Solutions</li>
-      </ul>
-    </div>
+        <div class="f-section2">
+          <h4>Team</h4>
+          <ul class="ul-list2">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Careers</li>
+            <li>Find a Partner</li>
+            <li>In the News</li>
+          </ul>
+        </div>
 
-    <div class="f-section5">
-      <h4>Resources</h4>
-      <ul class="ul-list4">
-        <li>Knowledge Base</li>
-        <li>Guides</li>
-        <li>Daily Webinars</li>
-        <li>Community</li>
-        <li>Customer Stories</li>
-        <li>Templates</li>
-        <li>Profesionals Services</li>
-        <li>Video Tutorials</li>
-        <li>Blog</li>
-        <li>Podcast</li>
-      </ul>
-    </div>
+        <div class="f-section3">
+          <h4>Solutions</h4>
+          <ul class="ul-list3">
+            <li>Project Management</li>
+            <li>Marketing</li>
+            <li>CRM and Sales</li>
+            <li>Software Development</li>
+            <li>Constructions</li>
+            <li>Creative Production</li>
+            <li>Remote Work</li>
+            <li>HR</li>
+            <li>IT</li>
+            <li>See More Solutions</li>
+          </ul>
+        </div>
+
+        <div class="f-section4">
+          <h4>Resources</h4>
+          <ul class="ul-list4">
+            <li>Knowledge Base</li>
+            <li>Guides</li>
+            <li>Daily Webinars</li>
+            <li>Community</li>
+            <li>Customer Stories</li>
+            <li>Templates</li>
+            <li>Profesionals Services</li>
+            <li>Video Tutorials</li>
+            <li>Blog</li>
+            <li>Podcast</li>
+          </ul>
+        </div>
+      </div>
 </section>
+
+<script>
+  const menu = document.querySelector(".nav");
+  function openMenu(){
+    menu.style.display = "flex";
+  }
+  function closeMenu(){
+    menu.style.display = "none";
+  }
+</script>
   </body>
 </html>

@@ -24,36 +24,6 @@
     width: 85%;
     top: 20px;
 }
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    /* gap: 70px; */
-    color: white;
-}
-.ul-lists{
-    position: absolute;
-    justify-content: center;
-    left: 20%;
-    flex-direction: column;
-    list-style: none;
-    align-items: center;
-}
-.lists{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: space-evenly;
-    gap: 40px;
-    margin: 50%;
-}
-.link{
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
 .menubar{
     display: none;
 }
@@ -88,7 +58,7 @@ text-decoration: none;
     width: 25px;
     position: absolute;
     bottom: 290px;
-    left: 370px;
+    right: 20%;
 }
 .img-01{
     width: 20px;
@@ -571,10 +541,18 @@ right: 20%;
 
 
 .newsletter-section {
-    text-align: center;
-    margin: 100px 0;
-    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;
     background-color: #fafaffe4;
+}
+.newsletter-con{
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .support-text {
@@ -598,23 +576,19 @@ right: 20%;
 
 .input-box {
     margin-top: 40px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     background: #fff;
+    width: 100%;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
 }
 
-.input-group {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-}
-
 .email-icon {
     font-size: 18px;
-    margin-right: 10px;
+    margin-right: 5px;
     opacity: 0.6;
 }
 
@@ -622,23 +596,24 @@ input {
     border: none;
     outline: none;
     font-size: 16px;
-    width: 250px;
+    width: 65%;
 }
 
 .subscribe-btn {
     background: #5d68ff;
     border: none;
-    padding: 8px 10px;
+    padding: 10px;
     border-radius: 10px;
     color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    margin-left: 10px;
+    font-size: 13px;
     cursor: pointer;
     box-shadow: 0px 5px 15px rgba(93,104,255,0.3);
     display: flex;
     align-items: center;
     gap: 8px;
+    i {
+        font-size: 12px;
+    }
 }
 
 .subscribe-btn:hover {
@@ -649,15 +624,20 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 85%;
+    width: 90%;
     margin: auto;
     height: 450px;
     margin-top: 70px;
 }
+.f-section-con{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
 .f-section1{
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 20px;
 }
 .sub-sec{
     display: flex;
@@ -787,13 +767,6 @@ input {
             width: 170px;
         }
     }
-    .lists {
-        display: none;
-    }
-    .link{
-        display: none;
-        
-    }
     #left-right{
         flex-direction: column;
     }
@@ -808,6 +781,9 @@ input {
     #hulu {
         flex-direction: column;
     }
+    .con-1 img{
+        width: 40px;
+    }
     .con-2{
         flex-direction: column;
         gap: 50px;
@@ -820,6 +796,9 @@ input {
         div {
             margin: auto;
         }
+        img {
+            width: 90%;
+        }
     }
     #sum{
         width: 100%;
@@ -828,14 +807,14 @@ input {
         flex-direction: column;
         gap: 40px;
         img{
-            transform: scale(0.7);
+            width: 90%;
         }
     }
     .integrate{
         font-size: 20px;
     }
     .img-int > img {
-        width: 60px;
+        width: 40px;
     }
     .con-4{
         flex-direction: column;
@@ -852,6 +831,7 @@ input {
         margin-top: 100px;
         img{
             transform: scale(0.9);
+            width: 90%;
         }
     }
     .con-6{
@@ -891,53 +871,85 @@ input {
     }
    .menubar{
     display: block;
-    position: relative;
-    color: #2D3150;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    color: #191b29;
    }
     .nav{
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        cursor: pointer;
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: #ffffff;
+    }V
+    .menu-logo{
+        width: 120px;
+        top: 10px;
+        left: 10px;
+        padding: 5px;
+        border-radius: 7px;
+        background: #007bff;
+        position: absolute;
     }
-    .ul-list{
-        position: relative;
+    #close-menu{
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        &:hover {
+            color: #e0b507;
+        }
+    }
+    .ul-lists{
+        width: 100%;
+        display: flex;
+        margin-top: 100px;
+        flex-direction: column;
     }
     .lists{
-        display: fixed;
-        position: absolute;
-        background: #2B3377;
-        width: 300px;
-        height: 100vh;
-    }
-    .ul-lists:hover .lists{
-        display: block;
+        color: #191b29;
     }
     .lists li{
         padding: 10px;
         cursor: pointer;
+        margin-bottom: 5px;
+        border-bottom: 1px solid gray;
     }
     .lists li:hover{
-        background-color: #2B3377;
+        background-color: #dfe0e7;
     }
-    .link a {
-    text-decoration: none;
-    margin-left: 10px;
-}
+    .link {
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .link1 {
+        color: #333;
+    }
 
-.link1 {
-    color: #333;
-}
+    .link2 {
+        padding: 10px 12px;
+        color: #007bff;
+        border-radius: 4px;
+    }
+    .link2:hover {
+        background: #007bff;
+        color: #fff;
+    }
 
-.link2 {
-    padding: 6px 12px;
-    border: 1px solid #007bff;
-    color: #007bff;
-    border-radius: 4px;
+.f-section-con{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
 }
-.link2:hover {
-    background: #007bff;
-    color: #fff;
+#footer-section{
+    flex-direction: column;
 }
-
 } 
