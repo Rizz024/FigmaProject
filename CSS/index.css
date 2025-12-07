@@ -27,6 +27,9 @@
 .menubar{
     display: none;
 }
+.nav{
+    display: none;
+}
 .link1{
 border-radius: 4px;
 color: gray;
