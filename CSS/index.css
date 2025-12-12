@@ -645,7 +645,8 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 90%;
+    width: 85%;
+    /* gap: 40px; */
     margin: auto;
     height: 450px;
     margin-top: 70px;
@@ -653,12 +654,15 @@ input {
 .f-section-con{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 85px;
+    h4{
+        color: #3C405F;
+    }
 }
 .f-section1{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 .sub-sec{
     display: flex;
@@ -717,6 +721,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 15px;
+     margin-top: 20px;
     color: #5C5E87;
     font-size: small;
     list-style: none;
@@ -735,6 +740,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 20px;
     color: #5C5E87;
     font-size: small;
     list-style: none;
@@ -753,6 +759,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 20px;
     color: #5C5E87;
     font-size: small;
     list-style: none;
@@ -771,6 +778,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 20px;
     color: #5C5E87;
     font-size: small;
     list-style: none;
